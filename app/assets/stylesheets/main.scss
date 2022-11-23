@@ -1,0 +1,47 @@
+.container-fluid{
+  padding: 0px;
+}
+.sign_up_form{
+
+}
+.tab-end{
+  text-align: end;
+}
+.page-content {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  overflow-y: auto;
+  max-height: 570px;
+}
+
+.index-card{
+  min-height: 28em;
+}
+
+trix-editor{
+  min-height: 20em;
+  padding: 30px !important
+}
+
+.trix-body{
+  margin-top: 30px;
+}
+
+figure{
+  width: 30em !important;
+  height: 25em !important
+}
+
+trix-editor img {
+  width: 30em !important;
+  height: 25em !important
+}
+.blog-show{
+  overflow-y: auto;
+  max-height: 570px;
+  min-height: 570px;
+  padding-left:30px;
+  padding-top: 15px
+}

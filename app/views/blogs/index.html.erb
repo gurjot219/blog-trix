@@ -1,0 +1,55 @@
+<div class="page-content">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card index-card">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-md-8 d-flex justify-content-start">
+
+              <a class="btn btn-dark" href="<%= new_blog_path %>" >
+                <i class="fa-solid fa-plus"></i> Add
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="card-body grid-view">
+          <div class="row">
+            <% @blogs.each do |blog| %>
+
+              <div class="col-md-3" style= "margin-bottom: 20px">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body" style="background-color: #f7f7f7;">
+                    <h5 class="card-title"><%= blog.title %></h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><%= blog.user.name %></h6>
+                    <h4><p class="card-text"><%= blog.description%></p></h4>
+                    <hr>
+                    <% if blog.user == current_user%>
+                      <a class="btn btn-success"  href=" <%= blog_path(blog) %>" >
+                        <i class="fa-solid fa-eye"></i>
+                      </a>
+
+                      <a class="btn btn-danger"  href=" <%= edit_blog_path(blog) %>" >
+                        <i class="fa-solid fa-file-pen"></i>
+                      </a>
+
+                      <a class="btn btn-warning"  href=" <%= blog_path(blog) %>" >
+                        <i class="fa-solid fa-trash"></i>
+                      </a>
+                    <%else%>
+                      <a class="btn btn-success"  href=" <%= blog_path(blog) %>" >
+                        <i class="fa-solid fa-eye"></i>
+                      </a>
+                    <%end%>
+
+                  </div>
+                </div>
+              </div>
+            <%end%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<header>
+    <div class="px-3 py-2 bg-dark text-white">
+      <div class="container-fluid">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="<%= blogs_path %>" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+            <i class="fa-solid fa-cat" style="height: 35px"></i>
+          </a>
+
+          <div class="text-end">
+            <%if user_signed_in? %>
+              <a class="btn btn-outline-light" data-turbo-method="delete" href=" <%= destroy_user_session_path %>" >
+                Sign Out
+              </a>
+            <%else%>
+              <a class="btn btn-outline-light me-2" href=" <%= new_user_session_path %>" >
+                Sign In
+              </a>
+              <a class="btn btn btn-warning" href=" <%= new_user_registration_path %>" >
+                Sign-Up
+              </a>
+            <%end%>
+          </div>
+
+        </div>
+      </div>
+    </div>
+</header>

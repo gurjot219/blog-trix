@@ -1,0 +1,54 @@
+<div class="page-content">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-md-3 d-flex justify-content-start">
+              <h5><b> <%= @blog.title %></b></h5>
+            </div>
+
+            <div class="col-md-9 d-flex justify-content-start">
+              <h5> <%= @blog.description %></h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body ">
+          <div class="row">
+            <div class="col-md-3 doc-profile">
+              <div class="card" style="width: 18rem;">
+                <div class="card-body" style="background-color: #f7f7f7;">
+                  <h5 class="card-title"><%= @blog.user.name %></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Total Blogs: <%= @blog.user.blogs.count %></h6>
+                  <hr>
+                  <ol>
+                    <% @blog.user.blogs.each do |blog| %>
+                      <li>
+                        <a href="<%= blog_path(blog)%>">
+                          <h6><p class="card-text"><%= blog.description%></p></h6>
+                        </a>
+                      </li>
+                    <%end%>
+                  </ol>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-9">
+              <div class="card">
+                <div >
+                  <div class="row">
+                    <div class="col-md-12 blog-show" >
+                      <%= @blog.body%>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
