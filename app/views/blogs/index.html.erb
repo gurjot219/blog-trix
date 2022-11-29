@@ -34,7 +34,7 @@
                         <i class="fa-solid fa-file-pen"></i>
                       </a>
 
-                      <a class="btn btn-warning"  href=" <%= blog_path(blog) %>" >
+                      <a class="btn btn-warning" data-turbo-method="delete" data-turbo-confirm="Are you sure?"  href=" <%= blog_path(blog) %>" >
                         <i class="fa-solid fa-trash"></i>
                       </a>
                     <%else%>
